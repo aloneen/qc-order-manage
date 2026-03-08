@@ -27,5 +27,6 @@ public class Order {
     @Column(nullable = false)
     private OrderStatus status;
 
+    @CreationTimestamp
     private LocalDateTime createdAt;
 }

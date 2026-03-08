@@ -3,6 +3,7 @@ package kz.seisen.qc_order_manage.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -19,6 +20,8 @@ public class Customer {
     private String name;
     @Column(nullable = false, unique = true)
     private String email;
+
+    @CreationTimestamp
     private LocalDateTime createdAt;
 
 
