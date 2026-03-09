@@ -1,12 +1,11 @@
 package kz.seisen.qc_order_manage.service;
 
 import kz.seisen.qc_order_manage.dto.CustomerDto;
-import kz.seisen.qc_order_manage.dto.OrderDto;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface CustomerService {
-    List<CustomerDto> getAll();
+    Page<CustomerDto> getAll(Pageable pageable);
     CustomerDto getById(Long id);
     CustomerDto create(CustomerDto dto);
     CustomerDto update(Long id, CustomerDto dto);

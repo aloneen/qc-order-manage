@@ -14,6 +14,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class CustomerDto {
 
+    private Long id;
+
     @NotBlank(message = "Name cannot be empty")
     private String name;
     @NotBlank(message = "Email cannot be empty")
